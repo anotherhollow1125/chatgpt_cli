@@ -1,0 +1,21 @@
+POST https://api.openai.com/v1/chat/completions HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer {{$dotenv CHATGPT_APIKEY}}
+
+{
+    "model": "gpt-4o",
+    "messages": [{"role": "user", "content": "Say this is a test!"}],
+    "temperature": 0.7
+}
+
+###
+
+POST https://api.openai.com/v1/chat/completions HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer {{$dotenv CHATGPT_APIKEY}}
+
+{
+    "model": "gpt-4o",
+    "messages": [{"role": "user", "content": "「これはテストです」と言ってください！"}],
+    "stream": true
+}
