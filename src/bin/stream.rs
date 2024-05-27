@@ -75,7 +75,7 @@ async fn query(
 ) -> Result<impl Stream<Item = reqwest::Result<Bytes>>> {
     let res = common_header(api_key)
         .json(&RequestBody {
-            model: "gpt-4".to_string(),
+            model: "gpt-4o".to_string(),
             messages: Vec::from(input_messages),
             stream: true,
         })
